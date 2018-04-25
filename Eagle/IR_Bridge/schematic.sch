@@ -308,7 +308,7 @@
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="ESP12E_DEVKIT">
+<deviceset name="ESP12E_DEVKIT" prefix="ESP">
 <description>ESP12E DEVKIT BOARD</description>
 <gates>
 <gate name="G$1" symbol="ESP12E_DEVKIT" x="0" y="0"/>
@@ -3007,7 +3007,7 @@ grid 5.08 mm</description>
 </class>
 </classes>
 <parts>
-<part name="U$1" library="ESP12E_DEVKIT" deviceset="ESP12E_DEVKIT" device="">
+<part name="NODEMCU" library="ESP12E_DEVKIT" deviceset="ESP12E_DEVKIT" device="">
 <attribute name="MF" value=""/>
 <attribute name="MPN" value=""/>
 <attribute name="OC_NEWARK" value="unknown"/>
@@ -3108,7 +3108,7 @@ grid 5.08 mm</description>
 <part name="P+5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="P+6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="P+7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
-<part name="U$2" library="tsop" deviceset="TSOP4838" device="">
+<part name="RECEIVER" library="tsop" deviceset="TSOP4838" device="">
 <attribute name="MF" value="VISHAY/TELEFUNKEN"/>
 <attribute name="MPN" value="TSOP4838"/>
 <attribute name="OC_NEWARK" value="60K6999"/>
@@ -3134,7 +3134,7 @@ grid 5.08 mm</description>
 <text x="144.78" y="50.8" size="1.778" layer="91">Receiver</text>
 </plain>
 <instances>
-<instance part="U$1" gate="G$1" x="81.28" y="50.8">
+<instance part="NODEMCU" gate="G$1" x="81.28" y="50.8">
 <attribute name="OC_NEWARK" x="81.28" y="50.8" size="1.778" layer="96" display="off"/>
 <attribute name="MF" x="81.28" y="50.8" size="1.778" layer="96" display="off"/>
 <attribute name="MPN" x="81.28" y="50.8" size="1.778" layer="96" display="off"/>
@@ -3235,7 +3235,7 @@ grid 5.08 mm</description>
 <instance part="P+5" gate="1" x="114.3" y="147.32"/>
 <instance part="P+6" gate="1" x="129.54" y="147.32"/>
 <instance part="P+7" gate="1" x="109.22" y="101.6"/>
-<instance part="U$2" gate="G$1" x="144.78" y="48.26" rot="R180">
+<instance part="RECEIVER" gate="G$1" x="144.78" y="48.26" rot="R180">
 <attribute name="OC_NEWARK" x="144.78" y="48.26" size="1.778" layer="96" display="off"/>
 <attribute name="MF" x="144.78" y="48.26" size="1.778" layer="96" display="off"/>
 <attribute name="MPN" x="144.78" y="48.26" size="1.778" layer="96" display="off"/>
@@ -3264,7 +3264,7 @@ grid 5.08 mm</description>
 <wire x1="109.22" y1="71.12" x2="109.22" y2="68.58" width="0.1524" layer="91"/>
 <pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="109.22" y1="68.58" x2="111.76" y2="68.58" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="D2"/>
+<pinref part="NODEMCU" gate="G$1" pin="D2"/>
 <wire x1="99.06" y1="63.5" x2="109.22" y2="63.5" width="0.1524" layer="91"/>
 <wire x1="109.22" y1="63.5" x2="109.22" y2="68.58" width="0.1524" layer="91"/>
 </segment>
@@ -3276,7 +3276,7 @@ grid 5.08 mm</description>
 <wire x1="109.22" y1="83.82" x2="109.22" y2="81.28" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="GND@3"/>
+<pinref part="NODEMCU" gate="G$1" pin="GND@3"/>
 <wire x1="99.06" y1="35.56" x2="106.68" y2="35.56" width="0.1524" layer="91"/>
 <pinref part="GND1" gate="1" pin="GND"/>
 <wire x1="106.68" y1="35.56" x2="106.68" y2="38.1" width="0.1524" layer="91"/>
@@ -3285,7 +3285,7 @@ grid 5.08 mm</description>
 <pinref part="GND3" gate="1" pin="GND"/>
 <pinref part="T1" gate="G1" pin="E"/>
 <wire x1="129.54" y1="63.5" x2="129.54" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="GND"/>
+<pinref part="RECEIVER" gate="G$1" pin="GND"/>
 <wire x1="129.54" y1="60.96" x2="129.54" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="137.16" y1="53.34" x2="137.16" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="137.16" y1="60.96" x2="129.54" y2="60.96" width="0.1524" layer="91"/>
@@ -3414,7 +3414,7 @@ grid 5.08 mm</description>
 </net>
 <net name="+5V" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="VIN"/>
+<pinref part="NODEMCU" gate="G$1" pin="VIN"/>
 <wire x1="63.5" y1="33.02" x2="53.34" y2="33.02" width="0.1524" layer="91"/>
 <pinref part="P+1" gate="1" pin="+5V"/>
 <wire x1="53.34" y1="33.02" x2="53.34" y2="35.56" width="0.1524" layer="91"/>
@@ -3453,7 +3453,7 @@ grid 5.08 mm</description>
 <pinref part="T8" gate="G$1" pin="E"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="V+"/>
+<pinref part="RECEIVER" gate="G$1" pin="V+"/>
 <pinref part="P+8" gate="1" pin="+5V"/>
 <wire x1="137.16" y1="43.18" x2="132.08" y2="43.18" width="0.1524" layer="91"/>
 </segment>
@@ -3465,10 +3465,10 @@ grid 5.08 mm</description>
 </net>
 <net name="N$6" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="OUT"/>
+<pinref part="RECEIVER" gate="G$1" pin="OUT"/>
 <wire x1="137.16" y1="48.26" x2="111.76" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="111.76" y1="48.26" x2="111.76" y2="66.04" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="D1"/>
+<pinref part="NODEMCU" gate="G$1" pin="D1"/>
 <wire x1="111.76" y1="66.04" x2="99.06" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 </net>

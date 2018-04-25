@@ -1292,6 +1292,65 @@ LTE-302
 </deviceset>
 </devicesets>
 </library>
+<library name="tsop">
+<description>IR Receiver and Demodulator</description>
+<packages>
+<package name="TSOP18XX">
+<wire x1="-2.5012" y1="-2.0266" x2="-3.0012" y2="-0.0266" width="0.127" layer="21"/>
+<wire x1="-3.0012" y1="-0.0266" x2="-2.5012" y2="1.9734" width="0.127" layer="21"/>
+<wire x1="-2.5012" y1="1.9734" x2="2.4988" y2="1.9734" width="0.127" layer="21"/>
+<wire x1="2.4988" y1="1.9734" x2="2.9988" y2="-0.0266" width="0.127" layer="21"/>
+<wire x1="2.9988" y1="-0.0266" x2="2.4988" y2="-2.0266" width="0.127" layer="21"/>
+<wire x1="2.4988" y1="-2.0266" x2="1.9988" y2="-2.0266" width="0.127" layer="21"/>
+<wire x1="1.9988" y1="-2.0266" x2="-2.0012" y2="-2.0266" width="0.127" layer="21"/>
+<wire x1="-2.0012" y1="-2.0266" x2="-2.5012" y2="-2.0266" width="0.127" layer="21"/>
+<wire x1="-2.0012" y1="-2.0266" x2="1.9988" y2="-2.0266" width="0.127" layer="21" curve="138.88791"/>
+<pad name="GND" x="-0.0012" y="-0.0266" drill="0.8128" shape="long" rot="R90"/>
+<pad name="VCC" x="2.4988" y="-0.0266" drill="0.8128" shape="long" rot="R90"/>
+<pad name="OUT" x="-2.5012" y="-0.0266" drill="0.8128" shape="long" rot="R90"/>
+</package>
+</packages>
+<symbols>
+<symbol name="TSOP">
+<wire x1="-5.08" y1="-5.08" x2="-5.08" y2="5.08" width="0.254" layer="94" curve="-180"/>
+<wire x1="-15.24" y1="0" x2="-12.7" y2="0" width="0.254" layer="94"/>
+<wire x1="-12.7" y1="0" x2="-17.78" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-15.24" y1="0" x2="-12.7" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-12.7" y1="2.54" x2="-12.7" y2="0" width="0.254" layer="94"/>
+<wire x1="-15.24" y1="10.16" x2="-10.16" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="5.08" x2="-10.16" y2="7.62" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="7.62" x2="-12.7" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-12.7" y1="5.08" x2="-10.16" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="7.62" x2="2.54" y2="7.62" width="0.254" layer="94"/>
+<wire x1="2.54" y1="7.62" x2="2.54" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-7.62" x2="-5.08" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-7.62" x2="-5.08" y2="7.62" width="0.254" layer="94"/>
+<pin name="GND" x="7.62" y="-5.08" visible="pin" length="middle" rot="R180"/>
+<pin name="OUT" x="7.62" y="0" visible="pin" length="middle" rot="R180"/>
+<pin name="V+" x="7.62" y="5.08" visible="pin" length="middle" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="TSOP4838">
+<description>IR Receiver and Demodulator</description>
+<gates>
+<gate name="G$1" symbol="TSOP" x="2.54" y="0"/>
+</gates>
+<devices>
+<device name="" package="TSOP18XX">
+<connects>
+<connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="OUT" pad="OUT"/>
+<connect gate="G$1" pin="V+" pad="VCC"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -1336,10 +1395,13 @@ LTE-302
 <part name="P+5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="P+6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="P+7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
+<part name="U$2" library="tsop" deviceset="TSOP4838" device=""/>
+<part name="P+8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
+<text x="144.78" y="50.8" size="1.778" layer="91">Receiver</text>
 </plain>
 <instances>
 <instance part="U$1" gate="G$1" x="81.28" y="50.8"/>
@@ -1349,7 +1411,7 @@ LTE-302
 <instance part="GND1" gate="1" x="106.68" y="40.64" rot="R180"/>
 <instance part="GND2" gate="1" x="109.22" y="86.36" rot="R180"/>
 <instance part="T1" gate="G1" x="127" y="68.58"/>
-<instance part="GND3" gate="1" x="129.54" y="58.42"/>
+<instance part="GND3" gate="1" x="129.54" y="55.88"/>
 <instance part="R4" gate="G$1" x="144.78" y="104.14"/>
 <instance part="R5" gate="G$1" x="116.84" y="91.44"/>
 <instance part="Q1" gate="G$1" x="129.54" y="96.52" rot="R90"/>
@@ -1376,6 +1438,8 @@ LTE-302
 <instance part="P+5" gate="1" x="114.3" y="147.32"/>
 <instance part="P+6" gate="1" x="129.54" y="147.32"/>
 <instance part="P+7" gate="1" x="109.22" y="101.6"/>
+<instance part="U$2" gate="G$1" x="144.78" y="48.26" rot="R180"/>
+<instance part="P+8" gate="1" x="129.54" y="43.18" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -1403,9 +1467,13 @@ LTE-302
 <wire x1="106.68" y1="35.56" x2="106.68" y2="38.1" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="T1" gate="G1" pin="E"/>
 <pinref part="GND3" gate="1" pin="GND"/>
+<pinref part="T1" gate="G1" pin="E"/>
 <wire x1="129.54" y1="63.5" x2="129.54" y2="60.96" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="G$1" pin="GND"/>
+<wire x1="129.54" y1="60.96" x2="129.54" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="137.16" y1="53.34" x2="137.16" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="137.16" y1="60.96" x2="129.54" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="T6" gate="G1" pin="E"/>
@@ -1561,6 +1629,20 @@ LTE-302
 <wire x1="109.22" y1="91.44" x2="111.76" y2="91.44" width="0.1524" layer="91"/>
 <pinref part="Q1" gate="G$1" pin="E"/>
 <wire x1="124.46" y1="99.06" x2="109.22" y2="99.06" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="V+"/>
+<pinref part="P+8" gate="1" pin="+5V"/>
+<wire x1="137.16" y1="43.18" x2="132.08" y2="43.18" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$6" class="0">
+<segment>
+<pinref part="U$2" gate="G$1" pin="OUT"/>
+<wire x1="137.16" y1="48.26" x2="111.76" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="48.26" x2="111.76" y2="66.04" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="D1"/>
+<wire x1="111.76" y1="66.04" x2="99.06" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
