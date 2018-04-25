@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.0.0">
+<eagle version="8.7.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -34,8 +34,8 @@
 <layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
@@ -158,10 +158,10 @@
 </layers>
 <board>
 <plain>
-<wire x1="-22.606" y1="-16.51" x2="27.92" y2="-16.51" width="0" layer="20"/>
-<wire x1="27.92" y1="-16.51" x2="27.92" y2="16.688" width="0" layer="20"/>
-<wire x1="27.92" y1="16.688" x2="-22.606" y2="16.688" width="0" layer="20"/>
-<wire x1="-22.606" y1="16.688" x2="-22.606" y2="-16.51" width="0" layer="20"/>
+<wire x1="-69.85" y1="-48.26" x2="90.15" y2="-48.26" width="0" layer="20"/>
+<wire x1="90.15" y1="-48.26" x2="90.15" y2="51.74" width="0" layer="20"/>
+<wire x1="90.15" y1="51.74" x2="-69.85" y2="51.74" width="0" layer="20"/>
+<wire x1="-69.85" y1="51.74" x2="-69.85" y2="-48.26" width="0" layer="20"/>
 <wire x1="-0.159709375" y1="6.30418125" x2="1.788240625" y2="12.2994" width="0.001" layer="112"/>
 <wire x1="1.788240625" y1="12.2994" x2="0.456759375" y2="12.732" width="0.001" layer="112"/>
 <wire x1="0.456759375" y1="12.732" x2="-1.4912" y2="6.7368" width="0.001" layer="112"/>
@@ -579,7 +579,7 @@ Commonly used for 1/4W through-hole resistors. 0.3" pitch between holes.</descri
 <class number="0" name="default" width="0.508" drill="0">
 </class>
 </classes>
-<designrules name="default *">
+<designrules name="default">
 <description language="de">&lt;b&gt;EAGLE Design Rules&lt;/b&gt;
 &lt;p&gt;
 Die Standard-Design-Rules sind so gewählt, dass sie für 
@@ -612,7 +612,7 @@ design rules under a new name.</description>
 <param name="mdDrill" value="6mil"/>
 <param name="mdSmdStop" value="0mil"/>
 <param name="msWidth" value="6mil"/>
-<param name="msDrill" value="0.15mm"/>
+<param name="msDrill" value="0.35mm"/>
 <param name="msMicroVia" value="9.99mm"/>
 <param name="msBlindViaRatio" value="0.5"/>
 <param name="rvPadTop" value="0.25"/>
@@ -652,7 +652,7 @@ design rules under a new name.</description>
 <param name="srMinRoundness" value="0mil"/>
 <param name="srMaxRoundness" value="0mil"/>
 <param name="slThermalIsolate" value="10mil"/>
-<param name="slThermalsForVias" value="1"/>
+<param name="slThermalsForVias" value="0"/>
 <param name="dpMaxLengthDifference" value="10mm"/>
 <param name="dpGapFactor" value="2.5"/>
 <param name="checkAngle" value="0"/>
@@ -760,169 +760,137 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="D1" library="SparkFun-LED" library_urn="urn:adsk.eagle:library:529" package="LED_5MM" package3d_urn="urn:adsk.eagle:package:39353/1" value="LED-IRTSAL6100" x="2.286" y="6.604" smashed="yes" rot="R342">
+<element name="D1" library="SparkFun-LED" library_urn="urn:adsk.eagle:library:529" package="LED_5MM" package3d_urn="urn:adsk.eagle:package:39353/1" value="LED-IRTSAL6100" x="2.286" y="6.604" rot="R342">
 <attribute name="MF" value="" x="2.286" y="6.604" size="1.778" layer="27" rot="R342" display="off"/>
 <attribute name="MPN" value="" x="2.286" y="6.604" size="1.778" layer="27" rot="R342" display="off"/>
-<attribute name="NAME" x="2.1972625" y="2.56539375" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
 <attribute name="OC_NEWARK" value="unknown" x="2.286" y="6.604" size="1.778" layer="27" rot="R342" display="off"/>
 <attribute name="PROD_ID" value="DIO-12058" x="2.286" y="6.604" size="1.778" layer="27" rot="R342" display="off"/>
-<attribute name="VALUE" x="2.1972625" y="2.31139375" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
 </element>
-<element name="D2" library="SparkFun-LED" library_urn="urn:adsk.eagle:library:529" package="LED_5MM" package3d_urn="urn:adsk.eagle:package:39353/1" value="LED-IRTSAL6100" x="-5.588" y="-4.064" smashed="yes" rot="R126">
+<element name="D2" library="SparkFun-LED" library_urn="urn:adsk.eagle:library:529" package="LED_5MM" package3d_urn="urn:adsk.eagle:package:39353/1" value="LED-IRTSAL6100" x="-5.588" y="-4.064" rot="R126">
 <attribute name="MF" value="" x="-5.588" y="-4.064" size="1.778" layer="27" rot="R126" display="off"/>
 <attribute name="MPN" value="" x="-5.588" y="-4.064" size="1.778" layer="27" rot="R126" display="off"/>
-<attribute name="NAME" x="-5.587996875" y="-8.10259375" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
 <attribute name="OC_NEWARK" value="unknown" x="-5.588" y="-4.064" size="1.778" layer="27" rot="R126" display="off"/>
 <attribute name="PROD_ID" value="DIO-12058" x="-5.588" y="-4.064" size="1.778" layer="27" rot="R126" display="off"/>
-<attribute name="VALUE" x="-5.587996875" y="-8.35659375" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
 </element>
-<element name="D3" library="SparkFun-LED" library_urn="urn:adsk.eagle:library:529" package="LED_5MM" package3d_urn="urn:adsk.eagle:package:39353/1" value="LED-IRTSAL6100" x="-5.588" y="4.318" smashed="yes" rot="R54">
+<element name="D3" library="SparkFun-LED" library_urn="urn:adsk.eagle:library:529" package="LED_5MM" package3d_urn="urn:adsk.eagle:package:39353/1" value="LED-IRTSAL6100" x="-5.588" y="4.318" rot="R54">
 <attribute name="MF" value="" x="-5.588" y="4.318" size="1.778" layer="27" rot="R54" display="off"/>
 <attribute name="MPN" value="" x="-5.588" y="4.318" size="1.778" layer="27" rot="R54" display="off"/>
-<attribute name="NAME" x="-5.58799375" y="0.2794" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
 <attribute name="OC_NEWARK" value="unknown" x="-5.588" y="4.318" size="1.778" layer="27" rot="R54" display="off"/>
 <attribute name="PROD_ID" value="DIO-12058" x="-5.588" y="4.318" size="1.778" layer="27" rot="R54" display="off"/>
-<attribute name="VALUE" x="-5.58799375" y="0.0254" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
 </element>
-<element name="D4" library="SparkFun-LED" library_urn="urn:adsk.eagle:library:529" package="LED_5MM" package3d_urn="urn:adsk.eagle:package:39353/1" value="LED-IRTSAL6100" x="2.032" y="-6.604" smashed="yes" rot="R198">
+<element name="D4" library="SparkFun-LED" library_urn="urn:adsk.eagle:library:529" package="LED_5MM" package3d_urn="urn:adsk.eagle:package:39353/1" value="LED-IRTSAL6100" x="2.032" y="-6.604" rot="R198">
 <attribute name="MF" value="" x="2.032" y="-6.604" size="1.778" layer="27" rot="R198" display="off"/>
 <attribute name="MPN" value="" x="2.032" y="-6.604" size="1.778" layer="27" rot="R198" display="off"/>
-<attribute name="NAME" x="2.120734375" y="-10.6426" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
 <attribute name="OC_NEWARK" value="unknown" x="2.032" y="-6.604" size="1.778" layer="27" rot="R198" display="off"/>
 <attribute name="PROD_ID" value="DIO-12058" x="2.032" y="-6.604" size="1.778" layer="27" rot="R198" display="off"/>
-<attribute name="VALUE" x="2.120734375" y="-10.8966" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
 </element>
-<element name="D5" library="SparkFun-LED" library_urn="urn:adsk.eagle:library:529" package="LED_5MM" package3d_urn="urn:adsk.eagle:package:39353/1" value="LED-IRTSAL6100" x="0" y="0" smashed="yes" rot="R90">
+<element name="D5" library="SparkFun-LED" library_urn="urn:adsk.eagle:library:529" package="LED_5MM" package3d_urn="urn:adsk.eagle:package:39353/1" value="LED-IRTSAL6100" x="0" y="0" rot="R90">
 <attribute name="MF" value="" x="0" y="0" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="" x="0" y="0" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="NAME" x="0" y="-4.0386" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
 <attribute name="OC_NEWARK" value="unknown" x="0" y="0" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="PROD_ID" value="DIO-12058" x="0" y="0" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="VALUE" x="0" y="-4.2926" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
 </element>
-<element name="R1" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" package="AXIAL-0.3" package3d_urn="urn:adsk.eagle:package:39658/1" value="1k" x="23.622" y="-2.032" rot="R90">
-<attribute name="MF" value="FARNELL" x="23.622" y="-2.032" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MPN" value="MCF 0.25W 1K" x="23.622" y="-2.032" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="OC_NEWARK" value="38K0327" x="23.622" y="-2.032" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="PROD_ID" value="RES-12182" x="23.622" y="-2.032" size="1.778" layer="27" rot="R90" display="off"/>
+<element name="R1" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" package="AXIAL-0.3" package3d_urn="urn:adsk.eagle:package:39658/1" value="1k" x="23.368" y="-14.224" rot="R180">
+<attribute name="MF" value="FARNELL" x="23.368" y="-14.224" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="MCF 0.25W 1K" x="23.368" y="-14.224" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="OC_NEWARK" value="38K0327" x="23.368" y="-14.224" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="PROD_ID" value="RES-12182" x="23.368" y="-14.224" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="R2" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" package="AXIAL-0.3" package3d_urn="urn:adsk.eagle:package:39658/1" value="1k" x="10.668" y="12.954" rot="R180">
-<attribute name="MF" value="FARNELL" x="10.668" y="12.954" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MPN" value="MCF 0.25W 1K" x="10.668" y="12.954" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="OC_NEWARK" value="38K0327" x="10.668" y="12.954" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="PROD_ID" value="RES-12182" x="10.668" y="12.954" size="1.778" layer="27" rot="R180" display="off"/>
+<element name="R2" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" package="AXIAL-0.3" package3d_urn="urn:adsk.eagle:package:39658/1" value="1k" x="23.368" y="-17.78">
+<attribute name="MF" value="FARNELL" x="23.368" y="-17.78" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="MCF 0.25W 1K" x="23.368" y="-17.78" size="1.778" layer="27" display="off"/>
+<attribute name="OC_NEWARK" value="38K0327" x="23.368" y="-17.78" size="1.778" layer="27" display="off"/>
+<attribute name="PROD_ID" value="RES-12182" x="23.368" y="-17.78" size="1.778" layer="27" display="off"/>
 </element>
-<element name="R3" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" package="AXIAL-0.3" package3d_urn="urn:adsk.eagle:package:39658/1" value="1k" x="20.828" y="-0.254" smashed="yes" rot="R90">
-<attribute name="MF" value="FARNELL" x="20.828" y="-0.254" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MPN" value="MCF 0.25W 1K" x="20.828" y="-0.254" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="NAME" x="19.812" y="-0.254" size="0.6096" layer="25" font="vector" ratio="20" rot="R90" align="bottom-center"/>
-<attribute name="OC_NEWARK" value="38K0327" x="20.828" y="-0.254" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="PROD_ID" value="RES-12182" x="20.828" y="-0.254" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="VALUE" x="21.844" y="-0.254" size="0.6096" layer="27" font="vector" ratio="20" rot="R90" align="top-center"/>
+<element name="R3" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" package="AXIAL-0.3" package3d_urn="urn:adsk.eagle:package:39658/1" value="1k" x="20.32" y="-5.08" rot="R180">
+<attribute name="MF" value="FARNELL" x="20.32" y="-5.08" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="MCF 0.25W 1K" x="20.32" y="-5.08" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="OC_NEWARK" value="38K0327" x="20.32" y="-5.08" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="PROD_ID" value="RES-12182" x="20.32" y="-5.08" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="R4" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" package="AXIAL-0.3" package3d_urn="urn:adsk.eagle:package:39658/1" value="10k" x="-17.272" y="-1.27" smashed="yes" rot="R270">
-<attribute name="MF" value="FARNELL" x="-17.272" y="-1.27" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MPN" value="MCF 0.25W 10K" x="-17.272" y="-1.27" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="NAME" x="-17.272" y="-6.858" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
-<attribute name="OC_NEWARK" value="38K0328" x="-17.272" y="-1.27" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="PROD_ID" value="RES-12183" x="-17.272" y="-1.27" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="VALUE" x="-17.272" y="-7.112" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
+<element name="R4" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" package="AXIAL-0.3" package3d_urn="urn:adsk.eagle:package:39658/1" value="10k" x="-3.81" y="14.224" rot="R270">
+<attribute name="MF" value="FARNELL" x="-3.81" y="14.224" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MPN" value="MCF 0.25W 10K" x="-3.81" y="14.224" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="OC_NEWARK" value="38K0328" x="-3.81" y="14.224" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="PROD_ID" value="RES-12183" x="-3.81" y="14.224" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="R5" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" package="AXIAL-0.3" package3d_urn="urn:adsk.eagle:package:39658/1" value="10k" x="11.938" y="-9.398">
-<attribute name="MF" value="FARNELL" x="11.938" y="-9.398" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="MCF 0.25W 10K" x="11.938" y="-9.398" size="1.778" layer="27" display="off"/>
-<attribute name="OC_NEWARK" value="38K0328" x="11.938" y="-9.398" size="1.778" layer="27" display="off"/>
-<attribute name="PROD_ID" value="RES-12183" x="11.938" y="-9.398" size="1.778" layer="27" display="off"/>
+<element name="R5" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" package="AXIAL-0.3" package3d_urn="urn:adsk.eagle:package:39658/1" value="10k" x="12.7" y="-8.636">
+<attribute name="MF" value="FARNELL" x="12.7" y="-8.636" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="MCF 0.25W 10K" x="12.7" y="-8.636" size="1.778" layer="27" display="off"/>
+<attribute name="OC_NEWARK" value="38K0328" x="12.7" y="-8.636" size="1.778" layer="27" display="off"/>
+<attribute name="PROD_ID" value="RES-12183" x="12.7" y="-8.636" size="1.778" layer="27" display="off"/>
 </element>
-<element name="T1" library="transistor" library_urn="urn:adsk.eagle:library:402" package="TO92" package3d_urn="urn:adsk.eagle:package:29893/2" value="2N3904" x="19.304" y="-7.112" smashed="yes" rot="R180">
-<attribute name="MF" value="FAIRCHILD SEMICONDUCTOR" x="19.304" y="-7.112" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MPN" value="2N3904BU" x="19.304" y="-7.112" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="NAME" x="18.241846875" y="-11.239540625" size="1.27" layer="25" ratio="10"/>
-<attribute name="OC_NEWARK" value="83C3116" x="19.304" y="-7.112" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="VALUE" x="16.113025" y="-12.763540625" size="1.27" layer="27" ratio="10"/>
+<element name="T1" library="transistor" library_urn="urn:adsk.eagle:library:402" package="TO92" package3d_urn="urn:adsk.eagle:package:29893/2" value="2N3904" x="23.114" y="-9.398" rot="R180">
+<attribute name="MF" value="FAIRCHILD SEMICONDUCTOR" x="23.114" y="-9.398" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="2N3904BU" x="23.114" y="-9.398" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="OC_NEWARK" value="83C3116" x="23.114" y="-9.398" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="T2" library="transistor" library_urn="urn:adsk.eagle:library:402" package="TO92" package3d_urn="urn:adsk.eagle:package:29893/2" value="2N3904" x="9.652" y="6.604" smashed="yes" rot="R162">
-<attribute name="MF" value="FAIRCHILD SEMICONDUCTOR" x="9.652" y="6.604" size="1.778" layer="27" rot="R162" display="off"/>
-<attribute name="MPN" value="2N3904BU" x="9.652" y="6.604" size="1.778" layer="27" rot="R162" display="off"/>
-<attribute name="NAME" x="8.589853125" y="2.43505625" size="1.27" layer="25" ratio="10"/>
-<attribute name="OC_NEWARK" value="83C3116" x="9.652" y="6.604" size="1.778" layer="27" rot="R162" display="off"/>
-<attribute name="VALUE" x="6.46103125" y="0.91105625" size="1.27" layer="27" ratio="10"/>
+<element name="T2" library="transistor" library_urn="urn:adsk.eagle:library:402" package="TO92" package3d_urn="urn:adsk.eagle:package:29893/2" value="2N3904" x="4.826" y="16.256" rot="R342">
+<attribute name="MF" value="FAIRCHILD SEMICONDUCTOR" x="4.826" y="16.256" size="1.778" layer="27" rot="R342" display="off"/>
+<attribute name="MPN" value="2N3904BU" x="4.826" y="16.256" size="1.778" layer="27" rot="R342" display="off"/>
+<attribute name="OC_NEWARK" value="83C3116" x="4.826" y="16.256" size="1.778" layer="27" rot="R342" display="off"/>
 </element>
-<element name="T3" library="transistor" library_urn="urn:adsk.eagle:library:402" package="TO92" package3d_urn="urn:adsk.eagle:package:29893/2" value="2N3904" x="-11.176" y="0.254" smashed="yes" rot="R126">
-<attribute name="MF" value="FAIRCHILD SEMICONDUCTOR" x="-11.176" y="0.254" size="1.778" layer="27" rot="R126" display="off"/>
-<attribute name="MPN" value="2N3904BU" x="-11.176" y="0.254" size="1.778" layer="27" rot="R126" display="off"/>
-<attribute name="NAME" x="-12.288221875" y="-3.873534375" size="1.27" layer="25" ratio="10"/>
-<attribute name="OC_NEWARK" value="83C3116" x="-11.176" y="0.254" size="1.778" layer="27" rot="R126" display="off"/>
-<attribute name="VALUE" x="-14.41704375" y="-5.397534375" size="1.27" layer="27" ratio="10"/>
+<element name="T3" library="transistor" library_urn="urn:adsk.eagle:library:402" package="TO92" package3d_urn="urn:adsk.eagle:package:29893/2" value="2N3904" x="-14.732" y="-0.762" rot="R90">
+<attribute name="MF" value="FAIRCHILD SEMICONDUCTOR" x="-14.732" y="-0.762" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="2N3904BU" x="-14.732" y="-0.762" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="OC_NEWARK" value="83C3116" x="-14.732" y="-0.762" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="T4" library="transistor" library_urn="urn:adsk.eagle:library:402" package="TO92" package3d_urn="urn:adsk.eagle:package:29893/2" value="2N3904" x="9.398" y="-5.588" smashed="yes" rot="R180">
-<attribute name="MF" value="FAIRCHILD SEMICONDUCTOR" x="9.398" y="-5.588" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MPN" value="2N3904BU" x="9.398" y="-5.588" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="NAME" x="8.335846875" y="-3.7465" size="1.27" layer="25" ratio="10"/>
-<attribute name="OC_NEWARK" value="83C3116" x="9.398" y="-5.588" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="VALUE" x="6.207025" y="-9.715540625" size="1.27" layer="27" ratio="10"/>
+<element name="T4" library="transistor" library_urn="urn:adsk.eagle:library:402" package="TO92" package3d_urn="urn:adsk.eagle:package:29893/2" value="2N3904" x="5.588" y="-14.986" smashed="yes" rot="R198">
+<attribute name="MF" value="FAIRCHILD SEMICONDUCTOR" x="5.588" y="-14.986" size="1.778" layer="27" rot="R198" display="off"/>
+<attribute name="MPN" value="2N3904BU" x="5.588" y="-14.986" size="1.778" layer="27" rot="R198" display="off"/>
+<attribute name="NAME" x="2.002621875" y="-14.79305" size="1.27" layer="25" ratio="10" rot="R198"/>
+<attribute name="OC_NEWARK" value="83C3116" x="5.588" y="-14.986" size="1.778" layer="27" rot="R198" display="off"/>
+<attribute name="VALUE" x="2.429946875" y="-16.2832875" size="1.27" layer="27" ratio="10" rot="R198"/>
 </element>
-<element name="T5" library="transistor" library_urn="urn:adsk.eagle:library:402" package="TO92" package3d_urn="urn:adsk.eagle:package:29893/2" value="2N3904" x="-14.224" y="5.588" smashed="yes" rot="R54">
-<attribute name="MF" value="FAIRCHILD SEMICONDUCTOR" x="-14.224" y="5.588" size="1.778" layer="27" rot="R54" display="off"/>
-<attribute name="MPN" value="2N3904BU" x="-14.224" y="5.588" size="1.778" layer="27" rot="R54" display="off"/>
-<attribute name="NAME" x="-13.71805" y="1.460446875" size="1.27" layer="25" ratio="10"/>
-<attribute name="OC_NEWARK" value="83C3116" x="-14.224" y="5.588" size="1.778" layer="27" rot="R54" display="off"/>
-<attribute name="VALUE" x="-17.97569375" y="-0.063553125" size="1.27" layer="27" ratio="10"/>
+<element name="T5" library="transistor" library_urn="urn:adsk.eagle:library:402" package="TO92" package3d_urn="urn:adsk.eagle:package:29893/2" value="2N3904" x="-13.208" y="10.414" rot="R54">
+<attribute name="MF" value="FAIRCHILD SEMICONDUCTOR" x="-13.208" y="10.414" size="1.778" layer="27" rot="R54" display="off"/>
+<attribute name="MPN" value="2N3904BU" x="-13.208" y="10.414" size="1.778" layer="27" rot="R54" display="off"/>
+<attribute name="OC_NEWARK" value="83C3116" x="-13.208" y="10.414" size="1.778" layer="27" rot="R54" display="off"/>
 </element>
-<element name="T6" library="transistor" library_urn="urn:adsk.eagle:library:402" package="TO92" package3d_urn="urn:adsk.eagle:package:29893/2" value="2N3904" x="-11.938" y="-8.128" smashed="yes" rot="R126">
-<attribute name="MF" value="FAIRCHILD SEMICONDUCTOR" x="-11.938" y="-8.128" size="1.778" layer="27" rot="R126" display="off"/>
-<attribute name="MPN" value="2N3904BU" x="-11.938" y="-8.128" size="1.778" layer="27" rot="R126" display="off"/>
-<attribute name="NAME" x="-14.66845" y="-5.270525" size="1.27" layer="25" ratio="10"/>
-<attribute name="OC_NEWARK" value="83C3116" x="-11.938" y="-8.128" size="1.778" layer="27" rot="R126" display="off"/>
-<attribute name="VALUE" x="-14.66845" y="-12.255534375" size="1.27" layer="27" ratio="10"/>
+<element name="T6" library="transistor" library_urn="urn:adsk.eagle:library:402" package="TO92" package3d_urn="urn:adsk.eagle:package:29893/2" value="2N3904" x="-12.446" y="-10.922" rot="R126">
+<attribute name="MF" value="FAIRCHILD SEMICONDUCTOR" x="-12.446" y="-10.922" size="1.778" layer="27" rot="R126" display="off"/>
+<attribute name="MPN" value="2N3904BU" x="-12.446" y="-10.922" size="1.778" layer="27" rot="R126" display="off"/>
+<attribute name="OC_NEWARK" value="83C3116" x="-12.446" y="-10.922" size="1.778" layer="27" rot="R126" display="off"/>
 </element>
-<element name="NODEMCU" library="ESP12E_DEVKIT" package="ESP12E_DEVKIT" value="ESP12E_DEVKIT" x="1.778" y="-1.524" rot="MR90">
-<attribute name="MF" value="" x="1.778" y="-1.524" size="1.778" layer="28" rot="MR90" display="off"/>
-<attribute name="MPN" value="" x="1.778" y="-1.524" size="1.778" layer="28" rot="MR90" display="off"/>
-<attribute name="OC_NEWARK" value="unknown" x="1.778" y="-1.524" size="1.778" layer="28" rot="MR90" display="off"/>
+<element name="U$1" library="ESP12E_DEVKIT" package="ESP12E_DEVKIT" value="ESP12E_DEVKIT" x="1.778" y="-33.02" rot="MR90">
+<attribute name="MF" value="" x="1.778" y="-33.02" size="1.778" layer="28" rot="MR90" display="off"/>
+<attribute name="MPN" value="" x="1.778" y="-33.02" size="1.778" layer="28" rot="MR90" display="off"/>
+<attribute name="OC_NEWARK" value="unknown" x="1.778" y="-33.02" size="1.778" layer="28" rot="MR90" display="off"/>
 </element>
-<element name="RECEIVER" library="tsop" package="TSOP18XX" value="TSOP4838" x="19.558" y="13.716" rot="R180">
-<attribute name="MF" value="VISHAY/TELEFUNKEN" x="19.558" y="13.716" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MPN" value="TSOP4838" x="19.558" y="13.716" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="OC_NEWARK" value="60K6999" x="19.558" y="13.716" size="1.778" layer="27" rot="R180" display="off"/>
+<element name="U$2" library="tsop" package="TSOP18XX" value="TSOP4838" x="1.27" y="-32.258">
+<attribute name="MF" value="VISHAY/TELEFUNKEN" x="1.27" y="-32.258" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="TSOP4838" x="1.27" y="-32.258" size="1.778" layer="27" display="off"/>
+<attribute name="OC_NEWARK" value="60K6999" x="1.27" y="-32.258" size="1.778" layer="27" display="off"/>
 </element>
-<element name="T7" library="transistor" library_urn="urn:adsk.eagle:library:402" package="TO92" package3d_urn="urn:adsk.eagle:package:29893/2" value="2N3904" x="14.986" y="-1.016" smashed="yes" rot="R270">
-<attribute name="MF" value="FAIRCHILD SEMICONDUCTOR" x="34.036" y="-1.016" size="1.778" layer="27" font="vector" rot="R270" display="off"/>
-<attribute name="MPN" value="2N3904BU" x="34.036" y="-1.016" size="1.778" layer="27" font="vector" rot="R270" display="off"/>
-<attribute name="NAME" x="14.431840625" y="-5.143465625" size="1.27" layer="25" ratio="10"/>
-<attribute name="OC_NEWARK" value="83C3116" x="34.036" y="-1.016" size="1.778" layer="27" font="vector" rot="R270" display="off"/>
-<attribute name="VALUE" x="12.30301875" y="-6.667465625" size="1.27" layer="27" ratio="10"/>
+<element name="T7" library="transistor" library_urn="urn:adsk.eagle:library:402" package="TO92" package3d_urn="urn:adsk.eagle:package:29893/2" value="2N3904" x="14.986" y="0" rot="R270">
+<attribute name="MF" value="FAIRCHILD SEMICONDUCTOR" x="34.036" y="0" size="1.778" layer="27" font="vector" rot="R270" display="off"/>
+<attribute name="MPN" value="2N3904BU" x="34.036" y="0" size="1.778" layer="27" font="vector" rot="R270" display="off"/>
+<attribute name="OC_NEWARK" value="83C3116" x="34.036" y="0" size="1.778" layer="27" font="vector" rot="R270" display="off"/>
 </element>
-<element name="D6" library="SparkFun-LED" library_urn="urn:adsk.eagle:library:529" package="LED_5MM" package3d_urn="urn:adsk.eagle:package:39353/1" value="LED-IRTSAL6100" x="6.858" y="0" smashed="yes" rot="R270">
+<element name="D6" library="SparkFun-LED" library_urn="urn:adsk.eagle:library:529" package="LED_5MM" package3d_urn="urn:adsk.eagle:package:39353/1" value="LED-IRTSAL6100" x="6.858" y="0" rot="R270">
 <attribute name="MF" value="" x="-9.652" y="0" size="1.778" layer="27" font="vector" rot="R270" display="off"/>
 <attribute name="MPN" value="" x="-9.652" y="0" size="1.778" layer="27" font="vector" rot="R270" display="off"/>
-<attribute name="NAME" x="6.857996875" y="-3.3782" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
 <attribute name="OC_NEWARK" value="unknown" x="-9.652" y="0" size="1.778" layer="27" font="vector" rot="R270" display="off"/>
 <attribute name="PROD_ID" value="DIO-12058" x="-9.652" y="0" size="1.778" layer="27" font="vector" rot="R270" display="off"/>
-<attribute name="VALUE" x="6.857996875" y="-3.6322" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
 </element>
-<element name="T8" library="transistor-neu-to92" library_urn="urn:adsk.eagle:library:397" package="TO92-EBC" package3d_urn="urn:adsk.eagle:package:28763/2" value="" x="16.002" y="3.556" rot="R180"/>
+<element name="T8" library="transistor-neu-to92" library_urn="urn:adsk.eagle:library:397" package="TO92-EBC" package3d_urn="urn:adsk.eagle:package:28763/2" value="" x="11.43" y="-13.97" rot="R90"/>
 </elements>
 <signals>
 <signal name="N$1">
 <contactref element="R2" pad="P$1"/>
 <contactref element="R1" pad="P$2"/>
-<contactref element="NODEMCU" pad="D2"/>
-<wire x1="14.478" y1="9.906" x2="14.478" y2="8.233209375" width="0.508" layer="1"/>
-<wire x1="14.478" y1="8.233209375" x2="14.55239375" y2="8.05360625" width="0.508" layer="1" curve="44.999502"/>
-<wire x1="14.55239375" y1="8.05360625" x2="15.24" y2="7.366" width="0.508" layer="1"/>
-<wire x1="15.24" y1="7.366" x2="19.706790625" y2="7.366" width="0.508" layer="1"/>
-<wire x1="19.706790625" y1="7.366" x2="19.88639375" y2="7.29160625" width="0.508" layer="1" curve="-44.999502"/>
-<wire x1="23.54760625" y1="3.63039375" x2="23.622" y2="3.450790625" width="0.508" layer="1" curve="-44.999295"/>
-<wire x1="23.622" y1="3.450790625" x2="23.622" y2="1.778" width="0.508" layer="1"/>
-<wire x1="19.88639375" y1="7.29160625" x2="23.54760625" y2="3.63039375" width="0.508" layer="1"/>
-<wire x1="14.478" y1="12.954" x2="14.478" y2="9.906" width="0.508" layer="1"/>
+<wire x1="19.558" y1="-17.78" x2="19.558" y2="-14.224" width="0.6096" layer="1"/>
+<contactref element="U$1" pad="D2"/>
+<wire x1="19.558" y1="-17.78" x2="18.288" y2="-19.05" width="0.6096" layer="1"/>
+<wire x1="18.288" y1="-19.05" x2="16.256" y2="-19.05" width="0.6096" layer="1"/>
+<wire x1="16.256" y1="-19.05" x2="14.478" y2="-20.828" width="0.6096" layer="1"/>
+<wire x1="14.478" y1="-20.828" x2="14.478" y2="-21.59" width="0.6096" layer="1"/>
 </signal>
 <signal name="GND">
 <contactref element="R2" pad="P$2"/>
-<contactref element="NODEMCU" pad="GND@3"/>
+<contactref element="U$1" pad="GND@3"/>
 <contactref element="T1" pad="3"/>
-<contactref element="RECEIVER" pad="GND"/>
+<contactref element="U$2" pad="GND"/>
 <contactref element="T6" pad="3"/>
 <contactref element="T5" pad="3"/>
 <contactref element="T4" pad="3"/>
@@ -930,48 +898,33 @@ design rules under a new name.</description>
 <contactref element="T2" pad="3"/>
 <contactref element="R4" pad="P$2"/>
 <contactref element="T7" pad="3"/>
-<polygon width="0.2" layer="1" isolate="0.4064">
-<vertex x="-29.972" y="-23.876"/>
-<vertex x="34.544" y="-23.368"/>
-<vertex x="34.798" y="20.828"/>
-<vertex x="-29.972" y="20.066"/>
+<polygon width="0.001" layer="1" isolate="0.4064">
+<vertex x="-69.342" y="-47.752"/>
+<vertex x="89.662" y="-47.752"/>
+<vertex x="89.916" y="51.308"/>
+<vertex x="-69.342" y="51.054"/>
 </polygon>
-<wire x1="-14.970484375" y1="4.560546875" x2="-13.462" y2="9.906" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$3">
 <contactref element="R1" pad="P$1"/>
 <contactref element="T1" pad="2"/>
-<wire x1="19.304" y1="-9.017" x2="19.35660625" y2="-8.96439375" width="0.508" layer="1"/>
-<wire x1="19.35660625" y1="-8.96439375" x2="19.536209375" y2="-8.89" width="0.508" layer="1" curve="-44.999295"/>
-<wire x1="21.484790625" y1="-8.89" x2="21.66439375" y2="-8.81560625" width="0.508" layer="1" curve="44.999502"/>
-<wire x1="21.66439375" y1="-8.81560625" x2="23.622" y2="-6.858" width="0.508" layer="1"/>
-<wire x1="23.622" y1="-6.858" x2="23.622" y2="-5.842" width="0.508" layer="1"/>
-<wire x1="19.536209375" y1="-8.89" x2="21.484790625" y2="-8.89" width="0.508" layer="1"/>
+<wire x1="27.178" y1="-14.224" x2="26.035" y2="-14.224" width="0.6096" layer="1"/>
+<wire x1="26.035" y1="-14.224" x2="23.114" y2="-11.303" width="0.6096" layer="1"/>
 </signal>
 <signal name="N$4">
 <contactref element="R3" pad="P$1"/>
 <contactref element="T1" pad="1"/>
-<wire x1="18.034" y1="-7.112" x2="19.22960625" y2="-5.91639375" width="0.508" layer="1"/>
-<wire x1="19.22960625" y1="-5.91639375" x2="19.304" y2="-5.736790625" width="0.508" layer="1" curve="44.999295"/>
-<wire x1="19.304" y1="-5.736790625" x2="19.304" y2="-5.08" width="0.508" layer="1"/>
-<wire x1="19.304" y1="-5.08" x2="20.24560625" y2="-4.13839375" width="0.508" layer="1"/>
-<wire x1="20.24560625" y1="-4.13839375" x2="20.425209375" y2="-4.064" width="0.508" layer="1" curve="-44.999295"/>
-<wire x1="20.425209375" y1="-4.064" x2="20.828" y2="-4.064" width="0.508" layer="1"/>
+<wire x1="21.844" y1="-9.398" x2="21.844" y2="-7.366" width="0.6096" layer="1"/>
+<wire x1="21.844" y1="-7.366" x2="24.13" y2="-5.08" width="0.6096" layer="1"/>
 </signal>
 <signal name="N$5">
 <contactref element="R3" pad="P$2"/>
 <contactref element="R5" pad="P$2"/>
+<wire x1="16.51" y1="-5.08" x2="16.51" y2="-8.636" width="0.6096" layer="1"/>
 <contactref element="T8" pad="B"/>
-<wire x1="16.002" y1="4.826" x2="16.002" y2="4.169209375" width="0.508" layer="1"/>
-<wire x1="16.002" y1="4.169209375" x2="16.07639375" y2="3.98960625" width="0.508" layer="1" curve="44.999502"/>
-<wire x1="16.07639375" y1="3.98960625" x2="18.542" y2="1.524" width="0.508" layer="1"/>
-<wire x1="18.542" y1="1.524" x2="20.49960625" y2="3.48160625" width="0.508" layer="1"/>
-<wire x1="20.49960625" y1="3.48160625" x2="20.679209375" y2="3.556" width="0.508" layer="1" curve="-44.999295"/>
-<wire x1="20.679209375" y1="3.556" x2="20.828" y2="3.556" width="0.508" layer="1"/>
-<wire x1="15.748" y1="-9.398" x2="15.748" y2="-7.217209375" width="0.508" layer="1"/>
-<wire x1="15.748" y1="-7.217209375" x2="15.82239375" y2="-7.03760625" width="0.508" layer="1" curve="-44.999502"/>
-<wire x1="15.82239375" y1="-7.03760625" x2="18.542" y2="-4.318" width="0.508" layer="1"/>
-<wire x1="18.542" y1="-4.318" x2="18.542" y2="1.524" width="0.508" layer="1"/>
+<wire x1="12.7" y1="-13.97" x2="14.986" y2="-13.97" width="0.6096" layer="1"/>
+<wire x1="14.986" y1="-13.97" x2="16.51" y2="-12.446" width="0.6096" layer="1"/>
+<wire x1="16.51" y1="-12.446" x2="16.51" y2="-8.636" width="0.6096" layer="1"/>
 </signal>
 <signal name="N$2">
 <contactref element="T3" pad="2"/>
@@ -981,105 +934,89 @@ design rules under a new name.</description>
 <contactref element="T2" pad="2"/>
 <contactref element="R4" pad="P$1"/>
 <contactref element="T7" pad="2"/>
+<wire x1="-14.749175" y1="11.533728125" x2="-7.994903125" y2="18.034" width="0.6096" layer="1"/>
+<wire x1="-7.994903125" y1="18.034" x2="-3.81" y2="18.034" width="0.6096" layer="1"/>
+<wire x1="16.891" y1="0" x2="16.891" y2="-1.651" width="0.6096" layer="1"/>
+<wire x1="16.891" y1="-1.651" x2="12.7" y2="-5.842" width="0.6096" layer="1"/>
+<wire x1="-13.987175" y1="-12.041728125" x2="-16.637" y2="-9.391903125" width="0.6096" layer="1"/>
+<wire x1="-16.637" y1="-9.391903125" x2="-16.637" y2="-0.762" width="0.6096" layer="1"/>
+<wire x1="-16.637" y1="-0.762" x2="-16.637" y2="9.391903125" width="0.6096" layer="1"/>
+<wire x1="-16.637" y1="9.391903125" x2="-14.749175" y2="11.533728125" width="0.6096" layer="1"/>
+<wire x1="-3.81" y1="18.034" x2="5.4484375" y2="18.034" width="0.6096" layer="1"/>
+<wire x1="5.4484375" y1="18.034" x2="5.414675" y2="18.0677625" width="0.6096" layer="1"/>
+<wire x1="5.414675" y1="18.0677625" x2="14.4442375" y2="18.0677625" width="0.6096" layer="1"/>
+<wire x1="14.4442375" y1="18.0677625" x2="16.764" y2="15.748" width="0.6096" layer="1"/>
+<wire x1="16.764" y1="15.748" x2="16.764" y2="0.127" width="0.6096" layer="1"/>
+<wire x1="16.764" y1="0.127" x2="16.891" y2="0" width="0.6096" layer="1"/>
 <contactref element="T8" pad="C"/>
-<wire x1="-15.765175" y1="6.707728125" x2="-17.19760625" y2="5.275296875" width="0.508" layer="1"/>
-<wire x1="-17.19760625" y1="5.275296875" x2="-17.272" y2="5.09569375" width="0.508" layer="1" curve="44.999295"/>
-<wire x1="-17.272" y1="5.09569375" x2="-17.272" y2="2.54" width="0.508" layer="1"/>
-<wire x1="-17.272" y1="2.54" x2="-15.113" y2="0.381" width="0.508" layer="1"/>
-<wire x1="-15.113" y1="0.381" x2="-13.940665625" y2="-0.791334375" width="0.508" layer="1"/>
-<wire x1="-13.940665625" y1="-0.791334375" x2="-13.7610625" y2="-0.865728125" width="0.508" layer="1" curve="44.999295"/>
-<wire x1="-13.7610625" y1="-0.865728125" x2="-12.717175" y2="-0.865728125" width="0.508" layer="1"/>
-<wire x1="-13.479175" y1="-9.247728125" x2="-15.03860625" y2="-7.688296875" width="0.508" layer="1"/>
-<wire x1="-15.03860625" y1="-7.688296875" x2="-15.113" y2="-7.50869375" width="0.508" layer="1" curve="-44.999295"/>
-<wire x1="-15.113" y1="-7.50869375" x2="-15.113" y2="0.381" width="0.508" layer="1"/>
-<wire x1="9.063321875" y1="4.792234375" x2="13.38048125" y2="4.792234375" width="0.508" layer="1"/>
-<wire x1="13.38048125" y1="4.792234375" x2="13.462" y2="4.826" width="0.508" layer="1" curve="45"/>
-<wire x1="16.891" y1="-1.016" x2="16.891" y2="0.275790625" width="0.508" layer="1"/>
-<wire x1="16.891" y1="0.275790625" x2="16.81660625" y2="0.45539375" width="0.508" layer="1" curve="44.999502"/>
-<wire x1="13.454875" y1="3.817125" x2="13.38048125" y2="3.996728125" width="0.508" layer="1" curve="-44.999295"/>
-<wire x1="13.38048125" y1="3.996728125" x2="13.38048125" y2="4.792234375" width="0.508" layer="1"/>
-<wire x1="16.81660625" y1="0.45539375" x2="13.454875" y2="3.817125" width="0.508" layer="1"/>
-<wire x1="9.398" y1="-7.493" x2="13.335" y2="-7.493" width="0.508" layer="16"/>
-<wire x1="16.764" y1="-1.143" x2="16.891" y2="-1.016" width="0.508" layer="16"/>
-<wire x1="13.335" y1="-7.493" x2="16.764" y2="-4.064" width="0.508" layer="16"/>
-<wire x1="16.764" y1="-4.064" x2="16.764" y2="-1.143" width="0.508" layer="16"/>
-<wire x1="-13.479175" y1="-9.247728125" x2="-11.804903125" y2="-10.922" width="0.508" layer="16"/>
-<wire x1="-11.804903125" y1="-10.922" x2="4.064" y2="-10.922" width="0.508" layer="16"/>
-<wire x1="4.064" y1="-10.922" x2="7.493" y2="-7.493" width="0.508" layer="16"/>
-<wire x1="7.493" y1="-7.493" x2="9.398" y2="-7.493" width="0.508" layer="16"/>
+<wire x1="12.7" y1="-5.842" x2="12.7" y2="-11.43" width="0.6096" layer="1"/>
+<wire x1="6.176675" y1="-16.7977625" x2="7.5862375" y2="-16.7977625" width="0.6096" layer="1"/>
+<wire x1="7.5862375" y1="-16.7977625" x2="10.16" y2="-14.224" width="0.6096" layer="1"/>
+<wire x1="10.16" y1="-14.224" x2="10.16" y2="-12.7" width="0.6096" layer="1"/>
+<wire x1="10.16" y1="-12.7" x2="11.43" y2="-11.43" width="0.6096" layer="1"/>
+<wire x1="11.43" y1="-11.43" x2="12.7" y2="-11.43" width="0.6096" layer="1"/>
 </signal>
 <signal name="N$10">
 <contactref element="D1" pad="K"/>
 <contactref element="T2" pad="1"/>
-<wire x1="3.493840625" y1="6.211546875" x2="7.55404375" y2="6.211546875" width="0.508" layer="1"/>
-<wire x1="7.55404375" y1="6.211546875" x2="7.733646875" y2="6.285940625" width="0.508" layer="1" curve="44.999502"/>
-<wire x1="7.733646875" y1="6.285940625" x2="8.44415625" y2="6.99645" width="0.508" layer="1"/>
+<wire x1="6.033840625" y1="15.863546875" x2="6.033840625" y2="8.751546875" width="0.6096" layer="1"/>
+<wire x1="6.033840625" y1="8.751546875" x2="3.493840625" y2="6.211546875" width="0.6096" layer="1"/>
 </signal>
 <signal name="N$11">
 <contactref element="D2" pad="K"/>
 <contactref element="T6" pad="1"/>
-<wire x1="-12.684484375" y1="-7.100546875" x2="-8.694878125" y2="-3.110940625" width="0.508" layer="1"/>
-<wire x1="-8.694878125" y1="-3.110940625" x2="-8.515275" y2="-3.036546875" width="0.508" layer="1" curve="-44.999295"/>
-<wire x1="-8.515275" y1="-3.036546875" x2="-6.334484375" y2="-3.036546875" width="0.508" layer="1"/>
+<wire x1="-13.192484375" y1="-9.894546875" x2="-6.334484375" y2="-3.036546875" width="0.6096" layer="1"/>
 </signal>
 <signal name="N$12">
 <contactref element="D3" pad="K"/>
 <contactref element="T5" pad="1"/>
-<wire x1="-13.4775125" y1="6.61545" x2="-6.216721875" y2="6.61545" width="0.508" layer="1"/>
-<wire x1="-6.216721875" y1="6.61545" x2="-6.03711875" y2="6.54105625" width="0.508" layer="1" curve="-44.999502"/>
-<wire x1="-6.03711875" y1="6.54105625" x2="-4.8415125" y2="5.34545" width="0.508" layer="1"/>
-<wire x1="-4.8415125" y1="5.34545" x2="-2.04345" y2="5.34545" width="0.508" layer="16"/>
-<wire x1="-2.04345" y1="5.34545" x2="-0.762" y2="4.064" width="0.508" layer="16"/>
+<wire x1="-12.4615125" y1="11.44145" x2="-10.9375125" y2="11.44145" width="0.6096" layer="1"/>
+<wire x1="-10.9375125" y1="11.44145" x2="-4.8415125" y2="5.34545" width="0.6096" layer="1"/>
 </signal>
 <signal name="N$13">
 <contactref element="D4" pad="K"/>
 <contactref element="T4" pad="1"/>
-<wire x1="8.128" y1="-5.588" x2="6.158253125" y2="-7.557746875" width="0.508" layer="1"/>
-<wire x1="6.158253125" y1="-7.557746875" x2="1.385453125" y2="-7.557746875" width="0.508" layer="1"/>
-<wire x1="1.385453125" y1="-7.557746875" x2="0.824159375" y2="-6.996453125" width="0.508" layer="1"/>
-<wire x1="0.824159375" y1="-6.996453125" x2="0.82415625" y2="-6.99645" width="0" layer="19" extent="1-1"/>
+<wire x1="4.38015625" y1="-15.37845" x2="0.82415625" y2="-11.82245" width="0.6096" layer="1"/>
+<wire x1="0.82415625" y1="-11.82245" x2="0.82415625" y2="-6.99645" width="0.6096" layer="1"/>
 </signal>
 <signal name="N$14">
 <contactref element="D5" pad="K"/>
 <contactref element="T3" pad="1"/>
-<wire x1="-11.9224875" y1="1.281453125" x2="-11.911034375" y2="1.27" width="0.508" layer="1"/>
-<wire x1="-11.911034375" y1="1.27" x2="0" y2="1.27" width="0.508" layer="1"/>
-<wire x1="-11.9224875" y1="1.281453125" x2="-11.922484375" y2="1.28145" width="0" layer="19" extent="1-1"/>
+<wire x1="-14.732" y1="0.508" x2="-3.556" y2="0.508" width="0.6096" layer="1"/>
+<wire x1="-2.794" y1="1.27" x2="0" y2="1.27" width="0.6096" layer="1"/>
+<wire x1="-3.556" y1="0.508" x2="-2.794" y2="1.27" width="0.6096" layer="1"/>
 </signal>
 <signal name="+5V">
-<contactref element="NODEMCU" pad="VIN"/>
+<contactref element="U$1" pad="VIN"/>
 <contactref element="D5" pad="A"/>
 <contactref element="D4" pad="A"/>
 <contactref element="D3" pad="A"/>
 <contactref element="D2" pad="A"/>
 <contactref element="D1" pad="A"/>
 <contactref element="R5" pad="P$1"/>
-<contactref element="RECEIVER" pad="VCC"/>
+<contactref element="U$2" pad="VCC"/>
 <contactref element="D6" pad="A"/>
-<polygon width="0.1524" layer="16" isolate="0.4064">
-<vertex x="-25.654" y="18.542"/>
-<vertex x="-28.448" y="-18.034"/>
-<vertex x="28.194" y="-19.05"/>
-<vertex x="31.496" y="17.272"/>
+<polygon width="0.001" layer="16" isolate="0.4064">
+<vertex x="-69.85" y="51.816"/>
+<vertex x="-69.85" y="-48.768"/>
+<vertex x="90.424" y="-48.26"/>
+<vertex x="90.678" y="51.562"/>
 </polygon>
 <contactref element="T8" pad="E"/>
 </signal>
 <signal name="N$6">
-<contactref element="RECEIVER" pad="OUT"/>
-<contactref element="NODEMCU" pad="D1"/>
-<wire x1="17.018" y1="9.906" x2="18.72160625" y2="11.60960625" width="0.508" layer="1"/>
-<wire x1="18.72160625" y1="11.60960625" x2="18.901209375" y2="11.684" width="0.508" layer="1" curve="-44.999295"/>
-<wire x1="18.901209375" y1="11.684" x2="20.574" y2="11.684" width="0.508" layer="1"/>
-<wire x1="20.574" y1="11.684" x2="21.98480625" y2="13.09480625" width="0.508" layer="1"/>
-<wire x1="21.98480625" y1="13.09480625" x2="22.0592" y2="13.274409375" width="0.508" layer="1" curve="44.999295"/>
-<wire x1="22.0592" y1="13.274409375" x2="22.0592" y2="13.7426" width="0.508" layer="1"/>
+<contactref element="U$2" pad="OUT"/>
+<contactref element="U$1" pad="D1"/>
+<wire x1="-1.2312" y1="-32.2846" x2="-1.2312" y2="-29.6792" width="0.6096" layer="1"/>
+<wire x1="1.524" y1="-26.924" x2="14.478" y2="-26.924" width="0.6096" layer="1"/>
+<wire x1="14.478" y1="-26.924" x2="17.018" y2="-24.384" width="0.6096" layer="1"/>
+<wire x1="17.018" y1="-24.384" x2="17.018" y2="-21.59" width="0.6096" layer="1"/>
+<wire x1="-1.2312" y1="-29.6792" x2="1.524" y2="-26.924" width="0.6096" layer="1"/>
 </signal>
 <signal name="N$8">
 <contactref element="D6" pad="K"/>
 <contactref element="T7" pad="1"/>
-<wire x1="6.858" y1="-1.27" x2="7.79960625" y2="-2.21160625" width="0.508" layer="1"/>
-<wire x1="7.79960625" y1="-2.21160625" x2="7.979209375" y2="-2.286" width="0.508" layer="1" curve="44.999295"/>
-<wire x1="7.979209375" y1="-2.286" x2="14.986" y2="-2.286" width="0.508" layer="1"/>
+<wire x1="14.986" y1="-1.27" x2="6.858" y2="-1.27" width="0.6096" layer="1"/>
 </signal>
 </signals>
 </board>

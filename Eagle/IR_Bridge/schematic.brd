@@ -865,9 +865,9 @@ design rules under a new name.</description>
 <element name="T5" library="transistor" library_urn="urn:adsk.eagle:library:402" package="TO92" package3d_urn="urn:adsk.eagle:package:29893/2" value="2N3904" x="-14.224" y="5.588" smashed="yes" rot="R54">
 <attribute name="MF" value="FAIRCHILD SEMICONDUCTOR" x="-14.224" y="5.588" size="1.778" layer="27" rot="R54" display="off"/>
 <attribute name="MPN" value="2N3904BU" x="-14.224" y="5.588" size="1.778" layer="27" rot="R54" display="off"/>
-<attribute name="NAME" x="-13.71805" y="1.460446875" size="1.27" layer="25" ratio="10"/>
+<attribute name="NAME" x="-16.9545375" y="1.460446875" size="1.27" layer="25" ratio="10"/>
 <attribute name="OC_NEWARK" value="83C3116" x="-14.224" y="5.588" size="1.778" layer="27" rot="R54" display="off"/>
-<attribute name="VALUE" x="-17.97569375" y="-0.063553125" size="1.27" layer="27" ratio="10"/>
+<attribute name="VALUE" x="-16.9545375" y="-0.063553125" size="1.27" layer="27" ratio="10"/>
 </element>
 <element name="T6" library="transistor" library_urn="urn:adsk.eagle:library:402" package="TO92" package3d_urn="urn:adsk.eagle:package:29893/2" value="2N3904" x="-11.938" y="-8.128" smashed="yes" rot="R126">
 <attribute name="MF" value="FAIRCHILD SEMICONDUCTOR" x="-11.938" y="-8.128" size="1.778" layer="27" rot="R126" display="off"/>
