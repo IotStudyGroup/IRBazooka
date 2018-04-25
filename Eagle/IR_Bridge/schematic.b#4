@@ -936,6 +936,7 @@ design rules under a new name.</description>
 <vertex x="34.798" y="20.828"/>
 <vertex x="-29.972" y="20.066"/>
 </polygon>
+<wire x1="-14.970484375" y1="4.560546875" x2="-13.462" y2="9.906" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$3">
 <contactref element="R1" pad="P$1"/>
@@ -1041,13 +1042,9 @@ design rules under a new name.</description>
 <signal name="N$14">
 <contactref element="D5" pad="K"/>
 <contactref element="T3" pad="1"/>
-<wire x1="-11.922484375" y1="1.281453125" x2="-8.7526625" y2="1.281453125" width="0.508" layer="16"/>
-<wire x1="-8.7526625" y1="1.281453125" x2="-8.573059375" y2="1.207059375" width="0.508" layer="16" curve="-44.999502"/>
-<wire x1="-0.32839375" y1="1.19560625" x2="-0.148790625" y2="1.27" width="0.508" layer="16" curve="-44.999295"/>
-<wire x1="-0.148790625" y1="1.27" x2="0" y2="1.27" width="0.508" layer="16"/>
-<wire x1="-8.573059375" y1="1.207059375" x2="-8.56160625" y2="1.19560625" width="0.508" layer="16"/>
-<wire x1="-8.56160625" y1="1.19560625" x2="-0.32839375" y2="1.19560625" width="0.508" layer="16"/>
-<wire x1="-11.922484375" y1="1.281453125" x2="-11.922484375" y2="1.28145" width="0" layer="19" extent="16-16"/>
+<wire x1="-11.9224875" y1="1.281453125" x2="-11.911034375" y2="1.27" width="0.508" layer="1"/>
+<wire x1="-11.911034375" y1="1.27" x2="0" y2="1.27" width="0.508" layer="1"/>
+<wire x1="-11.9224875" y1="1.281453125" x2="-11.922484375" y2="1.28145" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="+5V">
 <contactref element="NODEMCU" pad="VIN"/>
