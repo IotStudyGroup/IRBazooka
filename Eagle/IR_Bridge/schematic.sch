@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.7.1">
+<eagle version="9.0.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -158,9 +158,9 @@
 </layers>
 <schematic xreflabel="%F%N/%S.%C%R" xrefpart="/%S.%C%R">
 <libraries>
-<library name="ESP12E_DEVKIT">
+<library name="ESP12E_DEVKIT" urn="urn:adsk.eagle:library:2822280">
 <packages>
-<package name="ESP12E_DEVKIT">
+<package name="ESP12E_DEVKIT" urn="urn:adsk.eagle:footprint:2822281/1" library_version="1" library_locally_modified="yes">
 <description>ESP12E_DEVKIT</description>
 <wire x1="-12.7" y1="-24.13" x2="-12.7" y2="24.13" width="0.2032" layer="51"/>
 <wire x1="-12.7" y1="-24.13" x2="-3.81" y2="-24.13" width="0.2032" layer="51"/>
@@ -170,6 +170,34 @@
 <wire x1="-7.62" y1="24.13" x2="7.62" y2="24.13" width="0.2032" layer="51"/>
 <wire x1="7.62" y1="24.13" x2="12.7" y2="24.13" width="0.2032" layer="51"/>
 <wire x1="12.7" y1="24.13" x2="12.7" y2="-24.13" width="0.2032" layer="51"/>
+<wire x1="-7.62" y1="24.13" x2="-7.62" y2="1.27" width="0.2032" layer="51"/>
+<wire x1="-7.62" y1="1.27" x2="7.62" y2="1.27" width="0.2032" layer="51"/>
+<wire x1="7.62" y1="1.27" x2="7.62" y2="24.13" width="0.2032" layer="51"/>
+<wire x1="-3.81" y1="-24.13" x2="-3.81" y2="-20.32" width="0.2032" layer="51"/>
+<wire x1="-3.81" y1="-20.32" x2="3.81" y2="-20.32" width="0.2032" layer="51"/>
+<wire x1="3.81" y1="-20.32" x2="3.81" y2="-24.13" width="0.2032" layer="51"/>
+<wire x1="-5.08" y1="19.05" x2="-5.08" y2="22.86" width="0.2032" layer="51"/>
+<wire x1="-5.08" y1="22.86" x2="-3.81" y2="22.86" width="0.2032" layer="51"/>
+<wire x1="-3.81" y1="22.86" x2="-3.81" y2="20.32" width="0.2032" layer="51"/>
+<wire x1="-3.81" y1="20.32" x2="-2.54" y2="20.32" width="0.2032" layer="51"/>
+<wire x1="-2.54" y1="20.32" x2="-2.54" y2="22.86" width="0.2032" layer="51"/>
+<wire x1="-2.54" y1="22.86" x2="-1.27" y2="22.86" width="0.2032" layer="51"/>
+<wire x1="-1.27" y1="22.86" x2="-1.27" y2="20.32" width="0.2032" layer="51"/>
+<wire x1="-1.27" y1="20.32" x2="0" y2="20.32" width="0.2032" layer="51"/>
+<wire x1="0" y1="20.32" x2="0" y2="22.86" width="0.2032" layer="51"/>
+<wire x1="0" y1="22.86" x2="1.27" y2="22.86" width="0.2032" layer="51"/>
+<wire x1="1.27" y1="22.86" x2="1.27" y2="20.32" width="0.2032" layer="51"/>
+<wire x1="1.27" y1="20.32" x2="2.54" y2="20.32" width="0.2032" layer="51"/>
+<wire x1="2.54" y1="20.32" x2="2.54" y2="22.86" width="0.2032" layer="51"/>
+<wire x1="2.54" y1="22.86" x2="5.08" y2="22.86" width="0.2032" layer="51"/>
+<wire x1="-7.62" y1="-20.32" x2="-5.08" y2="-20.32" width="0.2032" layer="51"/>
+<wire x1="-5.08" y1="-20.32" x2="-5.08" y2="-22.86" width="0.2032" layer="51"/>
+<wire x1="-5.08" y1="-22.86" x2="-7.62" y2="-22.86" width="0.2032" layer="51"/>
+<wire x1="-7.62" y1="-22.86" x2="-7.62" y2="-20.32" width="0.2032" layer="51"/>
+<wire x1="5.08" y1="-20.32" x2="5.08" y2="-22.86" width="0.2032" layer="51"/>
+<wire x1="5.08" y1="-22.86" x2="7.62" y2="-22.86" width="0.2032" layer="51"/>
+<wire x1="7.62" y1="-22.86" x2="7.62" y2="-20.32" width="0.2032" layer="51"/>
+<wire x1="7.62" y1="-20.32" x2="5.08" y2="-20.32" width="0.2032" layer="51"/>
 <pad name="AD0" x="-11.43" y="17.78" drill="0.8" diameter="1.9304"/>
 <pad name="RSV@0" x="-11.43" y="15.24" drill="0.8" diameter="1.9304"/>
 <pad name="RSV@1" x="-11.43" y="12.7" drill="0.8" diameter="1.9304"/>
@@ -200,34 +228,6 @@
 <pad name="TX" x="11.43" y="-12.7" drill="0.8" diameter="1.9304"/>
 <pad name="GND@3" x="11.43" y="-15.24" drill="0.8" diameter="1.9304"/>
 <pad name="3V3@2" x="11.43" y="-17.78" drill="0.8" diameter="1.9304"/>
-<wire x1="-7.62" y1="24.13" x2="-7.62" y2="1.27" width="0.2032" layer="51"/>
-<wire x1="-7.62" y1="1.27" x2="7.62" y2="1.27" width="0.2032" layer="51"/>
-<wire x1="7.62" y1="1.27" x2="7.62" y2="24.13" width="0.2032" layer="51"/>
-<wire x1="-3.81" y1="-24.13" x2="-3.81" y2="-20.32" width="0.2032" layer="51"/>
-<wire x1="-3.81" y1="-20.32" x2="3.81" y2="-20.32" width="0.2032" layer="51"/>
-<wire x1="3.81" y1="-20.32" x2="3.81" y2="-24.13" width="0.2032" layer="51"/>
-<wire x1="-5.08" y1="19.05" x2="-5.08" y2="22.86" width="0.2032" layer="51"/>
-<wire x1="-5.08" y1="22.86" x2="-3.81" y2="22.86" width="0.2032" layer="51"/>
-<wire x1="-3.81" y1="22.86" x2="-3.81" y2="20.32" width="0.2032" layer="51"/>
-<wire x1="-3.81" y1="20.32" x2="-2.54" y2="20.32" width="0.2032" layer="51"/>
-<wire x1="-2.54" y1="20.32" x2="-2.54" y2="22.86" width="0.2032" layer="51"/>
-<wire x1="-2.54" y1="22.86" x2="-1.27" y2="22.86" width="0.2032" layer="51"/>
-<wire x1="-1.27" y1="22.86" x2="-1.27" y2="20.32" width="0.2032" layer="51"/>
-<wire x1="-1.27" y1="20.32" x2="0" y2="20.32" width="0.2032" layer="51"/>
-<wire x1="0" y1="20.32" x2="0" y2="22.86" width="0.2032" layer="51"/>
-<wire x1="0" y1="22.86" x2="1.27" y2="22.86" width="0.2032" layer="51"/>
-<wire x1="1.27" y1="22.86" x2="1.27" y2="20.32" width="0.2032" layer="51"/>
-<wire x1="1.27" y1="20.32" x2="2.54" y2="20.32" width="0.2032" layer="51"/>
-<wire x1="2.54" y1="20.32" x2="2.54" y2="22.86" width="0.2032" layer="51"/>
-<wire x1="2.54" y1="22.86" x2="5.08" y2="22.86" width="0.2032" layer="51"/>
-<wire x1="-7.62" y1="-20.32" x2="-5.08" y2="-20.32" width="0.2032" layer="51"/>
-<wire x1="-5.08" y1="-20.32" x2="-5.08" y2="-22.86" width="0.2032" layer="51"/>
-<wire x1="-5.08" y1="-22.86" x2="-7.62" y2="-22.86" width="0.2032" layer="51"/>
-<wire x1="-7.62" y1="-22.86" x2="-7.62" y2="-20.32" width="0.2032" layer="51"/>
-<wire x1="5.08" y1="-20.32" x2="5.08" y2="-22.86" width="0.2032" layer="51"/>
-<wire x1="5.08" y1="-22.86" x2="7.62" y2="-22.86" width="0.2032" layer="51"/>
-<wire x1="7.62" y1="-22.86" x2="7.62" y2="-20.32" width="0.2032" layer="51"/>
-<wire x1="7.62" y1="-20.32" x2="5.08" y2="-20.32" width="0.2032" layer="51"/>
 <hole x="-10.16" y="21.59" drill="3.2"/>
 <hole x="10.16" y="21.59" drill="3.2"/>
 <hole x="10.16" y="-21.59" drill="3.2"/>
@@ -266,8 +266,16 @@
 <text x="3.81" y="-19.05" size="1.778" layer="27" rot="R90">&gt;VALUE</text>
 </package>
 </packages>
+<packages3d>
+<package3d name="ESP12E_DEVKIT" urn="urn:adsk.eagle:package:2822283/2" type="model" library_version="1" library_locally_modified="yes">
+<description>ESP12E_DEVKIT</description>
+<packageinstances>
+<packageinstance name="ESP12E_DEVKIT"/>
+</packageinstances>
+</package3d>
+</packages3d>
 <symbols>
-<symbol name="ESP12E_DEVKIT">
+<symbol name="ESP12E_DEVKIT" urn="urn:adsk.eagle:symbol:2822282/1" library_version="1" library_locally_modified="yes">
 <description>ESP12E_DEVKIT</description>
 <pin name="AD0" x="-17.78" y="17.78" visible="pin" length="middle"/>
 <pin name="RSV@0" x="-17.78" y="15.24" visible="pin" length="middle"/>
@@ -308,7 +316,7 @@
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="ESP12E_DEVKIT" prefix="ESP">
+<deviceset name="ESP12E_DEVKIT" urn="urn:adsk.eagle:component:2822284/1" locally_modified="yes" library_version="1" library_locally_modified="yes">
 <description>ESP12E DEVKIT BOARD</description>
 <gates>
 <gate name="G$1" symbol="ESP12E_DEVKIT" x="0" y="0"/>
@@ -347,6 +355,9 @@
 <connect gate="G$1" pin="TX" pad="TX"/>
 <connect gate="G$1" pin="VIN" pad="VIN"/>
 </connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:2822283/2"/>
+</package3dinstances>
 <technologies>
 <technology name=""/>
 </technologies>
@@ -3007,7 +3018,7 @@ grid 5.08 mm</description>
 </class>
 </classes>
 <parts>
-<part name="NODEMCU" library="ESP12E_DEVKIT" deviceset="ESP12E_DEVKIT" device="">
+<part name="NODEMCU" library="ESP12E_DEVKIT" library_urn="urn:adsk.eagle:library:2822280" deviceset="ESP12E_DEVKIT" device="" package3d_urn="urn:adsk.eagle:package:2822283/2">
 <attribute name="MF" value=""/>
 <attribute name="MPN" value=""/>
 <attribute name="OC_NEWARK" value="unknown"/>
@@ -3126,7 +3137,7 @@ grid 5.08 mm</description>
 <attribute name="OC_NEWARK" value="unknown"/>
 </part>
 <part name="P+9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
-<part name="T8" library="transistor-neu-to92" library_urn="urn:adsk.eagle:library:397" deviceset="*-PNP-" device="TO92-EBC" package3d_urn="urn:adsk.eagle:package:28763/2"/>
+<part name="T8" library="transistor-neu-to92" library_urn="urn:adsk.eagle:library:397" deviceset="*-PNP-" device="TO92-EBC" package3d_urn="urn:adsk.eagle:package:28763/2" value="S8550"/>
 </parts>
 <sheets>
 <sheet>
