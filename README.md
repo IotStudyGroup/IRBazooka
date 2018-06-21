@@ -6,6 +6,20 @@ This is the initial repository for our IoT Study Group.
 
 The aim of this project is to create an automated way of turning off all the AC units in the office at some specified time, with the intention of reducing our energy consumption. Alexa integration is also on the roadmap, in order to control the AC units with only our voice power.
 
+# Bill Of Materials
+These are the components necessary to build the board
+```
+Qty   Value            Description
+
+ 2    10kΩ             10kΩ resistor
+ 3    1k               1kΩ resistor
+ 7    2N3904           NPN TRANSISTORe
+ 1    S8550            PNP Transistror
+ 1    ESP12E_DEVKIT    NodeMCU v2
+ 6    LED-IRTSAL6100   Infrared LED (IR)
+ 1    TSOP4838         IR Receiver and Demodulator
+ ```
+
 # Roadmap
 ## Firmware
 ### v0.1
@@ -21,12 +35,6 @@ The aim of this project is to create an automated way of turning off all the AC 
 ### v2.0
 - [ ] Web interface to configure MQTT broker address and topics
 - [ ] OTA firmware update
-
-## Node-RED
-### v0.1
-- [ ] Use it directly with MQTT
-### v1.0
-- [ ] Create a node to interface with the firmware
 
 # References
 - Circuit inspired by [Harald Braun's IRBridge](https://www.hackster.io/har-bra/irbridge-controlling-ir-devices-via-alexa-web-interface-66ca06)
