@@ -12,13 +12,21 @@ These are the components necessary to build the board
 Qty   Value            Description
 
  2    10kΩ             10kΩ resistor
- 3    1k               1kΩ resistor
+ 3    1kΩ              1kΩ resistor
  7    2N3904           NPN TRANSISTORe
  1    S8550            PNP Transistror
  1    ESP12E_DEVKIT    NodeMCU v2
  6    LED-IRTSAL6100   Infrared LED (IR)
  1    TSOP4838         IR Receiver and Demodulator
  ```
+ Link for buying at Filipe Flop:<br>
+ * [10kΩ resistor](https://www.filipeflop.com/produto/resistor-10k%CF%89-14w-x20-unidades/)<br>
+ * [1kΩ resistor](https://www.filipeflop.com/produto/resistor-1k%CF%89-14w-x20-unidades/)<br>
+ * [2N3904](https://www.filipeflop.com/produto/transistor-2n3904-npn-x10-unidades/)<br>
+ * [S8550](https://www.filipeflop.com/produto/transistor-s8550-pnp-x10-unidades/)<br>
+ * [ESP12E_DEVKIT](https://www.filipeflop.com/produto/modulo-wifi-esp8266-nodemcu-esp-12/)<br>
+ * [LED-IRTSAL6100](https://www.filipeflop.com/produto/led-emissor-infravermelho-ir-5mm/)<br>
+ * [TSOP4838](https://www.filipeflop.com/produto/receptor-infravermelho-ir-tsop4838/)<br>
 
 # Roadmap
 ## Firmware
