@@ -45,24 +45,69 @@ Qty   Value            Description
  * [LED-IRTSAL6100](https://www.filipeflop.com/produto/led-emissor-infravermelho-ir-5mm/)<br>
  * [TSOP4838](https://www.filipeflop.com/produto/receptor-infravermelho-ir-tsop4838/)<br>
 
-# Roadmap
-## Firmware
-For now we are using a modified version of the [OpenMQTTGateway](https://github.com/marciogranzotto/OpenMQTTGateway). You can check the documenation of that project to find out how to use it.
-However, in the future, we intend to create our own firmware. That code is inside the `NodeMCU` folder.
+# Pins:
+- D1 (GPIO5) - IR Receiver
+- D2 (GPIO4) - IR LEDs
 
-### v0.1
-- [x] Read IR signals
-- [x] Send IR signals
+# How to use it:
+The easiest way is to use it with [ESPHome](https://esphome.io/index.html)
+Here's an example of a configuration of a LG AC:
+```yaml
+substitutions:
+  room: bedroom
+  name: "Bedroom AC"
 
-### v1.0
-- [ ] Connect to an WiFi network and handle reconnection
-- [ ] Connect to an MQTT broker and handle reconnection
-- [ ] Read IR signals and publish the data on an MQTT topic
-- [ ] Subscribe to MQTT topic and send data to IR
+esphome:
+  name: bedroom_ac
+  platform: ESP8266
+  board: nodemcuv2
 
-### v2.0
-- [ ] Web interface to configure MQTT broker address and topics
-- [ ] OTA firmware update
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Bedroom Ac Fallback Hotspot"
+    password: !secret wifi_password
+
+captive_portal:
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+ota:
+
+remote_receiver:
+  id: receiver
+  pin:
+    number: D1
+    inverted: true
+  dump: raw
+
+remote_transmitter:
+  pin: D2
+  carrier_duty_percent: 50%
+
+# Using a temperature sensor from Home Assistant
+sensor:
+  - platform: homeassistant
+    name: "temp sensor"
+    internal: true
+    id: bedroom_temperature
+    entity_id: sensor.temperature_sensor
+
+climate:
+  name: "${name}"
+  platform: climate_ir_lg
+  receiver_id: receiver
+  sensor: bedroom_temperature
+  header_high: 3265us # AC Units from LG in Brazil, for example use these timings
+  header_low: 9856us
+```
 
 # References
 - Circuit inspired by [Harald Braun's IRBridge](https://www.hackster.io/har-bra/irbridge-controlling-ir-devices-via-alexa-web-interface-66ca06)
