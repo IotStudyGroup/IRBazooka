@@ -54,7 +54,6 @@ The easiest way is to use it with [ESPHome](https://esphome.io/index.html)
 Here's an example of a configuration of a LG AC:
 ```yaml
 substitutions:
-  room: bedroom
   name: "Bedroom AC"
 
 esphome:
@@ -97,14 +96,14 @@ sensor:
   - platform: homeassistant
     name: "temp sensor"
     internal: true
-    id: bedroom_temperature
-    entity_id: sensor.temperature_sensor
+    id: temp_sensor
+    entity_id: sensor.bedroom_temperature
 
 climate:
   name: "${name}"
   platform: climate_ir_lg
   receiver_id: receiver
-  sensor: bedroom_temperature
+  sensor: temp_sensor
   header_high: 3265us # AC Units from LG in Brazil, for example use these timings
   header_low: 9856us
 ```
